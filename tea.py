@@ -15,10 +15,10 @@ users = st.secrets["users"]
 
 # Login form
 if not st.session_state.logged_in:
-    st.title("🔒 Login to 7 Star Tea")
+    st.title("🔐 Login to 7 Star Tea")
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
-    
+
     if st.button("Login"):
         if username in users and users[username] == password:
             st.session_state.logged_in = True
@@ -26,8 +26,9 @@ if not st.session_state.logged_in:
             st.rerun()
         else:
             st.error("Invalid credentials")
-    
+
     st.stop()
+
 # ---- Constants ----
 DATA_FILE = "data.json"
 
@@ -155,6 +156,19 @@ elif menu == "Tea Report":
         grand_total = filtered_df["TotalAmount"].sum()
         st.markdown(f"### Grand Total: Rs.{grand_total:.2f}")
 
+        # ---- Monthly Office-wise Summary ----
+        st.subheader("📆 Monthly Report Summary")
+        monthly_summary = filtered_df.copy()
+        monthly_summary["Month"] = monthly_summary["Date"].dt.to_period("M").astype(str)
+
+        monthly_grouped = monthly_summary.groupby(["Month", "OfficeName"]).agg({
+            "TeaCount": "sum",
+            "CoffeeCount": "sum",
+            "TotalAmount": "sum"
+        }).reset_index()
+
+        st.dataframe(monthly_grouped)
+
         if st.button("Download Invoice PDF"):
             pdf = FPDF()
             pdf.add_page()
@@ -237,14 +251,3 @@ elif menu == "Tea Report":
             pdf.output("Invoice.pdf")
             with open("Invoice.pdf", "rb") as f:
                 st.download_button("Download Invoice", f, file_name="Invoice.pdf")
-
-        # ---- Monthly Office-wise Summary ----
-        st.subheader("📆 Monthly Report Summary")
-        monthly_summary = filtered_df.copy()
-        monthly_summary["Month"] = monthly_summary["Date"].dt.to_period("M").astype(str)
-
-        monthly_grouped = monthly_summary.groupby(["Month", "OfficeName"]).agg({
-            "TeaCount": "sum",
-            "CoffeeCount": "sum",
-            "TotalAmount": "sum"
-        }).rese
