@@ -46,3 +46,14 @@ PDF:        FPDF
 Database:   CSV or SQL (extensible)
 Libraries:  pandas, datetime, streamlit-authenticator
 ```
+### 🧠 Inspired By
+- Real-world billing struggles of small vendors and office pantry suppliers — digitized into a clean, usable SaaS.
+```
+📬 Contact
+📧 jenilrupapara340@gmail.com
+🌐 LinkedIn | GitHub
+```
+⭐ Like this project?
+If you found this useful or inspiring, please star this repo. It motivates me to build and share more tools like this!
+
+<p align="center"> <img src="https://img.shields.io/github/stars/jenilrupapara001/chaibook?style=social" /> </p>
