@@ -48,7 +48,7 @@ Libraries:  pandas, datetime, streamlit-authenticator
 ```
 ### 🧠 Inspired By
 - Real-world billing struggles of small vendors and office pantry suppliers — digitized into a clean, usable SaaS.
-```
+```yaml
 📬 Contact
 📧 jenilrupapara340@gmail.com
 🌐 LinkedIn | GitHub
