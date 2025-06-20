@@ -56,4 +56,4 @@ Libraries:  pandas, datetime, streamlit-authenticator
 ⭐ Like this project?
 If you found this useful or inspiring, please star this repo. It motivates me to build and share more tools like this!
 
-<p align="center"> <img src="https://img.shields.io/github/stars/jenilrupapara001/chaibook?style=social" /> </p>
+<p align="center"> <img src="https://img.shields.io/github/stars/jenilrupapara001/tea-stall-management?style=social" /> </p>
