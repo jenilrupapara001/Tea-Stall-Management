@@ -177,7 +177,7 @@ elif menu == "Tea Report":
             pdf.cell(0, 10, "7 Star Chai", ln=1, align="C")
             pdf.set_font("Arial", '', 10)
             pdf.cell(0, 10, "2/635, Udhana Darwaja, Malezaiwhar Mohalla, Rustompura, Surat, Gujarat, 395002", ln=1, align="C")
-            pdf.cell(0, 5, "Mobile: 9021579599", ln=1, align="C")
+            pdf.cell(0, 5, "Mobile: +91 95865 29453", ln=1, align="C")
             pdf.ln(5)
 
             pdf.set_font("Arial", '', 11)
