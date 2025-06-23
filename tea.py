@@ -6,6 +6,8 @@ from datetime import datetime
 import pandas as pd
 from fpdf import FPDF
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2149473171915063"
+     crossorigin="anonymous"></script>
 # ---- Authentication ----
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
